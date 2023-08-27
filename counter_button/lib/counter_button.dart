@@ -1,7 +1,21 @@
 library counter_button;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
+import 'package:flutter/material.dart';
+
+class CounterButton extends StatelessWidget {
+  const CounterButton({
+    super.key,
+    required this.onPressed,
+  });
+
+  final VoidCallback onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return FloatingActionButton(
+      onPressed: onPressed,
+      tooltip: 'Increment',
+      child: const Icon(Icons.add),
+    );
+  }
 }
