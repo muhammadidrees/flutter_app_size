@@ -1,4 +1,5 @@
 import 'package:counter_app/counter.dart';
+import 'package:counter_app/counter_button.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -60,10 +61,8 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: CounterButton(
         onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
       ),
     );
   }
